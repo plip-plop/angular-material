@@ -1,0 +1,28 @@
+@use "sass:map";
+
+@mixin colorisation($palette) {
+
+  .ice-class {
+    background: map.get($palette, 100);
+
+    &:hover {
+      background: map.get($palette, 700);
+    }
+
+    &:active {
+      background: map.get($palette, 500);
+    }
+
+    // "&:disabled" peut avoir des effets inattendus car il est partiellement redéfini par AM.
+    // Dans l'exemple suivant, "color" est redéfinie dans les mixins d'AM, mais pas le background...
+    &:disabled {
+      color: white;
+      background: black;
+    }
+
+    //... Dans ce cas, il faut donc redéfinir les classes CSS internes d'AM
+    &.mat-button.mat-button-disabled {
+      color: purple;
+    }
+  }
+}

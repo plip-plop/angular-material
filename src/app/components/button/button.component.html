@@ -1,0 +1,18 @@
+<h1>Par attribut "color"</h1>
+<!-- Styliser: par attribut "color" -->
+<button mat-button [color]="'primary'">Mat-Fire (primary)</button>
+
+<h1>Par mixin</h1>
+<!-- Styliser: par mixin/partial -->
+<button mat-button class="ice-class">Mat-Ice (mixin)</button>
+
+<h1>Section spéciale</h1>
+<!-- Styliser: par scope -->
+<div class="my-special-section">
+  <button mat-button [color]="'accent'">My-Special-Section</button>
+</div>
+
+<h1>Gestion du "disabled"</h1>
+<button mat-button color="primary" disabled>Mat-Primary (disabled)</button>
+<button mat-button class="ice-class" disabled>Mat-Ice (disabled)</button>
+

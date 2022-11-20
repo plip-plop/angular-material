@@ -1,0 +1,16 @@
+@use "sass:map";
+
+@mixin colorisation() {
+  .mat-typography {
+    & h1 {
+      text-decoration: underline;
+      margin: 15px 0;
+      font-size: 24px;
+    }
+
+    & p {
+      font-weight: bold;
+      margin: 15px 0 6px 0;
+    }
+  }
+}
